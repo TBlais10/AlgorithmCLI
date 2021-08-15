@@ -14,7 +14,6 @@ public class CLI {
 
         if (input == 1){
             System.out.println("...rerunning program");
-            FactorialCalculator.run();
             //rerun the program in this class
         }
         else if (input == 2){

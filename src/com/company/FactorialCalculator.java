@@ -28,8 +28,27 @@ public class FactorialCalculator {
             System.out.println("---\nThe factorial of " + num + " is " + count +"!\n---");
         }
 
-        CLI.proceed();
+        proceed();
         return count;
+    }
+    public static void proceed(){
+        System.out.println("What would you like to do now? Choose from the following:\n1) Rerun this program\n2) Return to the menu\n3) Quit the program");
+        System.out.print("Select by typing the corresponding number! Input: ");
+        byte input = CLI.scanner.nextByte();
+
+        if (input == 1){
+            System.out.println("...rerunning program");
+            //rerun the program in this class
+            run();
+        }
+        else if (input == 2){
+            System.out.println("...returning to main menu");
+            AlgorithmMenu.menu();
+        }
+        else if (input == 3){
+            CLI.exit();
+        }
+
     }
 
 }

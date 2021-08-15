@@ -14,9 +14,9 @@ public class AlgorithmMenu {
         if (selection == 1) {
             FactorialCalculator.run();
         } else if (selection == 2) {
-
+            TitleCase.run();
         } else if (selection == 3) {
-
+            PigLatin.run();
         } else if (selection == 4) {
 
         } else if (selection == 5) {
