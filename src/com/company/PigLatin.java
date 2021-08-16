@@ -5,23 +5,23 @@ public class PigLatin {
     public static void run() {
         System.out.println("Welcome to the Pig Latin Algorithm!\nThis algorithm will take a word or phrase and translate it to...well pig latin!\nExample: 'This is the way' becomes 'Histay Siway Hetay Ayway'");
         System.out.print("Input: ");
-        CLI.scanner.nextLine();
-        String input = CLI.scanner.nextLine();
+        String input = CLI.getString();
         pigLatin(input);
     }
 
     public static void pigLatin(String input) {
         String[] stringArr = input.toLowerCase().split(" ");
-        String [] vowels = {"a", "e", "i", "o", "u"};
+        String[] vowels = {"a", "e", "i", "o", "u"};
         String newString = "";
 
         for (int i = 0; i < stringArr.length; i++) {
             for (int j = 0; j < vowels.length; j++) {
-                if (stringArr[i].substring(0, 1) != vowels[j]) {
-                    stringArr[i] = stringArr[i].substring(1, 2).toUpperCase() + stringArr[i].substring(2) + stringArr[i].substring(0, 1) + "ay";
+                if (stringArr[i].substring(0, 1) == vowels[j]) {
+                    stringArr[i] = stringArr[i] + "way";
 
                 } else {
-                    stringArr[i] = stringArr[i] + "way";
+                    stringArr[i] = stringArr[i].substring(1, 2).toUpperCase() + stringArr[i].substring(2) + stringArr[i].substring(0, 1) + "ay";
+
 
                 }
 
@@ -36,7 +36,7 @@ public class PigLatin {
     public static void proceed() {
         System.out.println("What would you like to do now? Choose from the following:\n1) Rerun this program\n2) Return to the menu\n3) Quit the program");
         System.out.print("Select by typing the corresponding number! Input: ");
-        byte input = CLI.scanner.nextByte();
+        int input = CLI.getInt();
 
         if (input == 1) {
             System.out.println("...rerunning program");
@@ -52,7 +52,7 @@ public class PigLatin {
     }
 
     public static void main(String[] args) {
-        pigLatin("a needs to have way added only");
+        //pigLatin("a needs to have way added only");
     }
 
 

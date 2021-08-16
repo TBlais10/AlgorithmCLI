@@ -5,7 +5,7 @@ public class FactorialCalculator {
     public static void run(){
         System.out.println("\nWelcome to the Factorial Calculator!\nThe Factorial Calculator takes a number and multiplies each positive number that is less than or equal to that number\nExample: The number is 3. Factorial is 1 * 2 * 3 = 6.");
         System.out.print("Input: ");
-        int input = CLI.scanner.nextInt();
+        int input = CLI.getInt();
         factorial(input);
 
     }
@@ -34,7 +34,7 @@ public class FactorialCalculator {
     public static void proceed(){
         System.out.println("What would you like to do now? Choose from the following:\n1) Rerun this program\n2) Return to the menu\n3) Quit the program");
         System.out.print("Select by typing the corresponding number! Input: ");
-        byte input = CLI.scanner.nextByte();
+        int input = CLI.getInt();
 
         if (input == 1){
             System.out.println("...rerunning program");

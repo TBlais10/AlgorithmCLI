@@ -5,8 +5,7 @@ public class TitleCase {
     public static void run() {
         System.out.println("\nWelcome to the Title Case a String Algorithm!\nThis algorithm will take any word or phrase and capitalize the first letter of those words and put the rest to lowercase!\nExample: 'I am a little tea pot' becomes 'I Am A Little Tea Pot.'");
         System.out.print("Input: ");
-        CLI.scanner.nextLine();
-        String input = CLI.scanner.nextLine();
+        String input = CLI.getString();
         titleCase(input);
 
     }
@@ -30,7 +29,7 @@ public class TitleCase {
     public static void proceed(){
         System.out.println("What would you like to do now? Choose from the following:\n1) Rerun this program\n2) Return to the menu\n3) Quit the program");
         System.out.print("Select by typing the corresponding number! Input: ");
-        byte input = CLI.scanner.nextByte();
+        int input = CLI.getInt();
 
         if (input == 1){
             System.out.println("...rerunning program");
