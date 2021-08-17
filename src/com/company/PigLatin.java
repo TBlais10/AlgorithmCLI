@@ -1,5 +1,8 @@
 package com.company;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+
 public class PigLatin {
 
     public static void run() {
@@ -13,19 +16,23 @@ public class PigLatin {
         String[] stringArr = input.toLowerCase().split(" ");
         String[] vowels = {"a", "e", "i", "o", "u"};
         String newString = "";
+        //ArrayList<String> pigArr = new ArrayList<>();
 
         for (int i = 0; i < stringArr.length; i++) {
-            for (int j = 0; j < vowels.length; j++) {
+            for (int j = 0; j < vowels.length;j++){
+
                 if (stringArr[i].substring(0, 1) == vowels[j]) {
                     stringArr[i] = stringArr[i] + "way";
 
                 } else {
-                    stringArr[i] = stringArr[i].substring(1, 2).toUpperCase() + stringArr[i].substring(2) + stringArr[i].substring(0, 1) + "ay";
-
-
+                    stringArr[i] = stringArr[i].substring(1) + stringArr[i].substring(0, 1) + "ay";
                 }
 
             }
+
+
+
+
 
             newString = newString.join(" ", stringArr);
         }
@@ -52,7 +59,7 @@ public class PigLatin {
     }
 
     public static void main(String[] args) {
-        //pigLatin("a needs to have way added only");
+        pigLatin("Cats are great pets!");
     }
 
 

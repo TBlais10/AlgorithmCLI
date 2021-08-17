@@ -21,6 +21,14 @@ public class CLI {
         return userStr;
     }
 
+    public static void exit(){
+            System.out.println("Exiting program. See you next time!");
+    }
+
+        public static void main(String[] args) {
+       // exit();
+    }
+
     public static void proceed(){
         System.out.println("What would you like to do now? Choose from the following:\n1) Rerun this program\n2) Return to the menu\n3) Quit the program");
         System.out.print("Select by typing the corresponding number! Input: ");
@@ -38,14 +46,6 @@ public class CLI {
             exit();
         }
 
-    }
-
-    public static void exit(){
-            System.out.println("Exiting program. See you next time!");
-    }
-
-        public static void main(String[] args) {
-       // exit();
     }
 
 }
